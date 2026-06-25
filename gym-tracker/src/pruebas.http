@@ -23,7 +23,37 @@ Content-Type: application/json
 }
 
 ### Borrar un entrenamiento de BJJ por su ID
-DELETE http://localhost:8080/api/bjj/3
+DELETE http://localhost:8080/api/bjj/2
 
 ### Ver la lista completa de entrenamientos de BJJ
 GET http://localhost:8080/api/bjj
+
+### Borrar un entrenamiento de Gimnasio por su ID
+DELETE http://localhost:8080/api/gimnasio/3
+
+### Ver la lista completa de entrenamientos de Gimnasio
+GET http://localhost:8080/api/gimnasio
+
+### Actualizar un entrenamiento de BJJ existente
+PUT http://localhost:8080/api/bjj/1
+Content-Type: application/json
+
+{
+  "duracion": 120,
+  "fecha": "2026-06-25",
+  "tecnica": "Paso de Guardia de la Riva (Modificado a tope)",
+  "rolls": 7
+}
+
+### Actualizar un entrenamiento de gimnasio existente
+PUT http://localhost:8080/api/gimnasio/1
+Content-Type: application/json
+
+{
+  "duracion": 75,
+  "fecha": "2026-06-25",
+  "ejercicio": "Press Banca (Record Personal)",
+  "series": 4,
+  "repeticiones": 8,
+  "peso": 85
+}
