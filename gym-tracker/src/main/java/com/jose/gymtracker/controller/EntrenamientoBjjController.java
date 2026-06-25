@@ -2,9 +2,7 @@ package com.jose.gymtracker.controller;
 
 import com.jose.gymtracker.model.EntrenamientoBjj;
 import com.jose.gymtracker.repository.EntrenamientoBjjRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,5 +19,10 @@ public class EntrenamientoBjjController {
     @GetMapping
     public List<EntrenamientoBjj> obtenerTodosLosEntrenamientosBjj() {
         return bjjRepository.findAll();
+    }
+
+    @PostMapping
+    public EntrenamientoBjj crearEntrenamientoBjj(@RequestBody EntrenamientoBjj nuevoEntreno){
+        return  bjjRepository.save(nuevoEntreno);
     }
 }

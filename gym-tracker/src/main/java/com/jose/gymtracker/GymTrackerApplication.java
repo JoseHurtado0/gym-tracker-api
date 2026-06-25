@@ -16,21 +16,21 @@ public class GymTrackerApplication {
 		SpringApplication.run(GymTrackerApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner ejecutarAlArranque(
-			EntrenamientoBjjRepository bjjRepo,
-			EntrenamientoGimnasioRepository gymRepo){
+	//@Bean
+	//public CommandLineRunner ejecutarAlArranque(
+		//	EntrenamientoBjjRepository bjjRepo,
+		//	EntrenamientoGimnasioRepository gymRepo){
 
-		return args -> {
-			System.out.println("============== INICIANDO INYECCIÓN DE ENTRENAMIENTOS ============");
-			EntrenamientoBjj entrenoBjj = new EntrenamientoBjj(null, 90, "2026-06-24", "Pasaje Guardia", 4);
+		//return args -> {
+			//System.out.println("============== INICIANDO INYECCIÓN DE ENTRENAMIENTOS ============");
+			//EntrenamientoBjj entrenoBjj = new EntrenamientoBjj(null, 90, "2026-06-24", "Pasaje Guardia", 4);
 
-			EntrenamientoGimnasio entrenoGym = new EntrenamientoGimnasio(0, "Press Banca", 4, 12, 80);
+			//EntrenamientoGimnasio entrenoGym = new EntrenamientoGimnasio(0, "Press Banca", 4, 12, 80);
 
-			bjjRepo.save(entrenoBjj);
-			gymRepo.save(entrenoGym);
-			System.out.println("====== ¡ENTRENAMIENTOS GUARDADOS EN MYSQL CON ÉXITO! ======");
-		};
-	}
+			//bjjRepo.save(entrenoBjj);
+			//gymRepo.save(entrenoGym);
+			//System.out.println("====== ¡ENTRENAMIENTOS GUARDADOS EN MYSQL CON ÉXITO! ======");
+	//	};
+	//}
 
 }

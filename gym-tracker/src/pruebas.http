@@ -1,0 +1,9 @@
+POST http://localhost:8080/api/bjj
+Content-Type: application/json
+
+{
+  "duracion": 90,
+  "fecha": "2026-06-25",
+  "tecnica": "Paso de Guardia de la Riva",
+  "rolls": 5
+}
