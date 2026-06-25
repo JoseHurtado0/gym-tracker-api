@@ -25,4 +25,9 @@ public class EntrenamientoBjjController {
     public EntrenamientoBjj crearEntrenamientoBjj(@RequestBody EntrenamientoBjj nuevoEntreno){
         return  bjjRepository.save(nuevoEntreno);
     }
+
+    @DeleteMapping("/{id}")
+    public void borrarEntrenamientoBjj(@PathVariable Long id){
+        bjjRepository.deleteById(id);
+    }
 }

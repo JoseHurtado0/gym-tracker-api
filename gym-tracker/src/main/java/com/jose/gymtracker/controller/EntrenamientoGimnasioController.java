@@ -26,4 +26,8 @@ public class EntrenamientoGimnasioController {
     public EntrenamientoGimnasio crearEntrenaminetoGimnasio(@RequestBody EntrenamientoGimnasio nuevoEntreno){
         return gimnasioRepository.save(nuevoEntreno);
     }
+    @DeleteMapping("/{id}")
+    public void borrarEntrenamientoGimnasio(@PathVariable Long id){
+        gimnasioRepository.deleteById(id);
+    }
 }

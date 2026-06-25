@@ -21,3 +21,9 @@ Content-Type: application/json
   "repeticiones": 10,
   "peso": 80
 }
+
+### Borrar un entrenamiento de BJJ por su ID
+DELETE http://localhost:8080/api/bjj/3
+
+### Ver la lista completa de entrenamientos de BJJ
+GET http://localhost:8080/api/bjj
