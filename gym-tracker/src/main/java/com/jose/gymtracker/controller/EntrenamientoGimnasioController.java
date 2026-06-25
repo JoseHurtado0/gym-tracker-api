@@ -3,9 +3,7 @@ package com.jose.gymtracker.controller;
 
 import com.jose.gymtracker.model.EntrenamientoGimnasio;
 import com.jose.gymtracker.repository.EntrenamientoGimnasioRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,5 +21,9 @@ public class EntrenamientoGimnasioController {
     public List<EntrenamientoGimnasio> obteEntrenamientoGimnasios(){
         return gimnasioRepository.findAll();
 
+    }
+    @PostMapping
+    public EntrenamientoGimnasio crearEntrenaminetoGimnasio(@RequestBody EntrenamientoGimnasio nuevoEntreno){
+        return gimnasioRepository.save(nuevoEntreno);
     }
 }

@@ -7,3 +7,17 @@ Content-Type: application/json
   "tecnica": "Paso de Guardia de la Riva",
   "rolls": 5
 }
+
+###
+
+POST http://localhost:8080/api/gimnasio
+Content-Type: application/json
+
+{
+  "duracion": 60,
+  "fecha": "2026-06-25",
+  "ejercicio": "Press Banca",
+  "series": 4,
+  "repeticiones": 10,
+  "peso": 80
+}
